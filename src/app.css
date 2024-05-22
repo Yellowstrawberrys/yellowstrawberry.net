@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-@media screen and (max-width: 768px){ 
- nav {
-  display: none;
- }
- main {
-  flex: .9;
- }
+#b {
+  position: absolute;
+  background-color: #1A191F;
+  margin: 0;
+  padding: 1% 5%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #BABABA;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 body {
@@ -35,7 +38,7 @@ main {
   padding: 2rem;
   max-width: 47rem;
   align-self: end;
-  margin-bottom: 10rem;
+  margin-bottom: 14rem;
   border-radius: .2rem;
 }
 main * {
@@ -50,15 +53,15 @@ main > div {
   transform: translate(-50%);
 }
 #cphead {
-  bottom: -13%;
+  bottom: -15%;
   width: 95%;
-  height: 10%;
+  height: 12%;
   background-color: #C6C3A5;
 }
 #cpbody {
-  bottom: -40%;
+  bottom: -57%;
   width: 120%;
-  height: 30%;
+  height: 45%;
   box-sizing: border-box;
   padding: 3%;
   background-color: #E4E0BF;
@@ -82,6 +85,39 @@ main h1 {
 main h3+p {
   margin-top: .2rem;
 }
-nav {
+sidebar {
   flex: .19;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 1.5rem 0;
 }
+
+@media screen and (max-width: 768px){ 
+  #b {
+    width: 100%;
+  }
+  sidebar {
+   display: none;
+  }
+  main {
+   flex: .9;
+   padding: 1rem;
+   outline: 1rem solid #EAE6C6;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  main h3+p {
+    font-size: .9rem;
+  }
+
+  #cpbody {
+    width: 110%;
+  }
+ }
+ 
